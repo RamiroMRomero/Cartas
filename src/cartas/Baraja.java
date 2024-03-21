@@ -12,11 +12,13 @@ public class Baraja {
         mazo = new ArrayList<Carta>();
         monton = new ArrayList<Carta>();
         
-        for (PaloEnum Palo : PaloEnum.values()) {
+        for (PaloEnum palo : PaloEnum.values()) {
             for (int i=1; i<=12; i++) {
                 if (i==8) {
-                    i+=2;
+                    i+=2; //Nos salteamos el 8 y el 9 del mazo
                 }
+                Carta carta = new Carta(palo, i);
+                mazo.add(carta);
             }
         }
     }

@@ -2,24 +2,24 @@
 package cartas;
 
 public class Carta {
-    private PaloEnum Palo;
+    private PaloEnum palo;
     private int numero;
 
     @Override
     public String toString() {
-        return "Carta{" + "Palo=" + Palo + ", numero=" + numero + '}';
+        return "Carta{" + "Palo=" + palo + ", numero=" + numero + '}';
     }
 
     public PaloEnum getPalo() {
-        return Palo;
+        return palo;
     }
 
     public int getNumero() {
         return numero;
     }
 
-    public Carta(PaloEnum Palo, int numero) {
-        this.Palo = Palo;
+    public Carta(PaloEnum palo, int numero) {
+        this.palo = palo;
         this.numero = numero;
     }
     
