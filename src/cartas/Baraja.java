@@ -51,6 +51,13 @@ public class Baraja {
     public void mostrarBaraja() {
         //no llama a siguiente carta ya que no se deben pasar al monton
         //llama a cartasDisponibles
+        if (cartasDisponibles() <= 0){
+            System.out.println("No quedan cartas en el mazo");
+        }else{
+            for (Carta carta : mazo) {
+                System.out.println(carta.toString());
+            }
+        }
     }
 }
 
