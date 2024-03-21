@@ -56,6 +56,13 @@ public class Baraja {
     public void cartasMonton() {
         //muestra las cartas que ya han sido descartadas
         //si no hay cartas en el monton indicar que no hay cartas en el monton
+        if (cartasDisponibles() <= 0){
+            System.out.println("No hay cartas en el monton");
+        }else{
+            for (Carta carta : monton) {
+                System.out.println(carta.toString());
+            }
+        }
     }
     
     public void mostrarBaraja() {
