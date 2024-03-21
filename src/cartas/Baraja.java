@@ -27,8 +27,18 @@ public class Baraja {
         Collections.shuffle(mazo);
     }
     
-    public void siguienteCarta() {
+    public Carta siguienteCarta() {
         //muestra la siguiente carta y la manda al monton
+        Carta carta;
+        if(this.cartasDisponibles()==0){
+            System.out.println("mazo vacio");
+            return null;
+        }else{
+            carta=mazo.get(0);
+            mazo.remove(carta);
+            monton.add(carta);
+            return carta;
+        }
     }
     
     public int cartasDisponibles() {
