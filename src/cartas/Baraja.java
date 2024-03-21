@@ -32,6 +32,7 @@ public class Baraja {
     }
     
     public void cartasMonton() {
+        //muestra las cartas que ya han sido descartadas
         //si no hay cartas en el monton indicar que no hay cartas en el monton
     }
     
