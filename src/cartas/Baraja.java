@@ -2,6 +2,7 @@
 package cartas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Baraja {
     private ArrayList<Carta> mazo;
@@ -12,7 +13,7 @@ public class Baraja {
     }
     
     public void barajar() {
-        
+        Collections.shuffle(mazo);
     }
     
     public void siguienteCarta() {
@@ -21,7 +22,7 @@ public class Baraja {
     
     public int cartasDisponibles() {
         //muestra el numero de cartas disponibles en la baraja
-        return 0;
+        return mazo.size();
     }
     
     public void darCartas(int Cantidad) {
