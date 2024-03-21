@@ -46,11 +46,31 @@ public class Baraja {
         return mazo.size();
     }
     
-    public void darCartas(int Cantidad) {
+    public ArrayList<Carta> darCartas(int cantidad) {
         //llama a cartas disponibles para ver si tenemos la cantidad solicitada
         //si no tenemos las suficientes mandamos un mensaje diciendo que no alcanzan las cartas
         //no hacemos nada
         //si alcanzan las cartas llamamos a siguienteCarta la cantidad de veces solicitadas
+        
+        ArrayList<Carta> mano = new ArrayList<>();
+        
+        if(cantidad <= 0){
+            System.out.println("Solicite más de cero cartas");
+            
+        }
+        else if(this.cartasDisponibles() < cantidad){
+            System.out.println("No hay suficientes cartas");
+        }
+        else{
+            for (int i = 0; i < cantidad; i++) {
+                Carta carta = this.siguienteCarta();
+                System.out.println(carta.toString());
+                mano.add(carta);
+            }
+        }
+        
+        return mano;
+        
     }
     
     public void cartasMonton() {
