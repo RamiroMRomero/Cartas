@@ -9,7 +9,16 @@ public class Baraja {
     private ArrayList<Carta> monton;
     
     public Baraja() {
+        mazo = new ArrayList<Carta>();
+        monton = new ArrayList<Carta>();
         
+        for (PaloEnum Palo : PaloEnum.values()) {
+            for (int i=1; i<=12; i++) {
+                if (i==8) {
+                    i+=2;
+                }
+            }
+        }
     }
     
     public void barajar() {
